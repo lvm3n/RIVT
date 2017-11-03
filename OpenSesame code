@@ -1,0 +1,697 @@
+---
+API: 2
+OpenSesame: 3.1.9
+Platform: nt
+---
+set width 1024
+set uniform_coordinates yes
+set title "Extended template"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend legacy
+set round_decimals 2
+set osf_id 59dd3d22594d9002b1c377cf
+set mouse_backend xpyriment
+set keyboard_backend legacy
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 18
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:\\Users\\jaros\\Downloads"
+set disable_garbage_collection yes
+set description "A template containing a practice and an experimental phase"
+set coordinates uniform
+set compensation 0
+set color_backend legacy
+set clock_backend legacy
+set canvas_backend xpyriment
+set bidi yes
+set background black
+
+define sketchpad FBcom_3
+	set start_response_interval no
+	set duration 2000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=20 html=yes show_if=always text="Reagovali jste, když jste reagovat neměli." x=0 y=0 z_index=0
+
+define sketchpad FBomiss_3
+	set start_response_interval no
+	set duration 2000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=20 html=yes show_if=always text="Nereagovali jste, když jste reagovat měli." x=0 y=0 z_index=0
+
+define inline_script ISI
+	set description "Executes Python code"
+	___run__
+	total_time = 900 # The response time + the padding time
+	padding_time = total_time - self.get('response_time')
+	if padding_time > 0:
+	    self.sleep(padding_time)
+	__end__
+	set _prepare ""
+
+define inline_script ISI2
+	set description "Executes Python code"
+	___run__
+	total_time = 1800 # The response time + the padding time
+	padding_time = total_time - self.get('response_time')
+	if padding_time > 0:
+	    self.sleep(padding_time)
+	__end__
+	set _prepare ""
+
+define loop Inhib1000
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description "A single block of trials"
+	set cycles 23
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Stimuli s1LR
+	setcycle 0 correct_response space
+	setcycle 1 Stimuli s2LR
+	setcycle 1 correct_response space
+	setcycle 2 Stimuli s2
+	setcycle 2 correct_response space
+	setcycle 3 Stimuli s2RR
+	setcycle 3 correct_response space
+	setcycle 4 Stimuli s1RR
+	setcycle 4 correct_response space
+	setcycle 5 Stimuli s1LR
+	setcycle 5 correct_response space
+	setcycle 6 Stimuli s2LR
+	setcycle 6 correct_response space
+	setcycle 7 Stimuli s2
+	setcycle 7 correct_response space
+	setcycle 8 Stimuli s2RR
+	setcycle 8 correct_response space
+	setcycle 9 Stimuli s1RR
+	setcycle 9 correct_response space
+	setcycle 10 Stimuli s1LR
+	setcycle 10 correct_response space
+	setcycle 11 Stimuli s2LR
+	setcycle 11 correct_response space
+	setcycle 12 Stimuli s2
+	setcycle 12 correct_response space
+	setcycle 13 Stimuli s2RR
+	setcycle 13 correct_response space
+	setcycle 14 Stimuli s1RR
+	setcycle 14 correct_response space
+	setcycle 15 Stimuli s1LR
+	setcycle 15 correct_response space
+	setcycle 16 Stimuli s2LR
+	setcycle 16 correct_response space
+	setcycle 17 Stimuli s2
+	setcycle 17 correct_response space
+	setcycle 18 Stimuli s2RR
+	setcycle 18 correct_response space
+	setcycle 19 Stimuli s1RR
+	setcycle 19 correct_response space
+	setcycle 20 Stimuli s1
+	setcycle 20 correct_response none
+	setcycle 21 Stimuli s1
+	setcycle 21 correct_response none
+	setcycle 22 Stimuli s1
+	setcycle 22 correct_response none
+	run TrialI1
+
+define loop Inhib1640
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description "A single block of trials"
+	set cycles 23
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Stimuli s1LR
+	setcycle 0 correct_response space
+	setcycle 1 Stimuli s2LR
+	setcycle 1 correct_response space
+	setcycle 2 Stimuli s2
+	setcycle 2 correct_response space
+	setcycle 3 Stimuli s2RR
+	setcycle 3 correct_response space
+	setcycle 4 Stimuli s1RR
+	setcycle 4 correct_response space
+	setcycle 5 Stimuli s1LR
+	setcycle 5 correct_response space
+	setcycle 6 Stimuli s2LR
+	setcycle 6 correct_response space
+	setcycle 7 Stimuli s2
+	setcycle 7 correct_response space
+	setcycle 8 Stimuli s2RR
+	setcycle 8 correct_response space
+	setcycle 9 Stimuli s1RR
+	setcycle 9 correct_response space
+	setcycle 10 Stimuli s1LR
+	setcycle 10 correct_response space
+	setcycle 11 Stimuli s2LR
+	setcycle 11 correct_response space
+	setcycle 12 Stimuli s2
+	setcycle 12 correct_response space
+	setcycle 13 Stimuli s2RR
+	setcycle 13 correct_response space
+	setcycle 14 Stimuli s1RR
+	setcycle 14 correct_response space
+	setcycle 15 Stimuli s1LR
+	setcycle 15 correct_response space
+	setcycle 16 Stimuli s2LR
+	setcycle 16 correct_response space
+	setcycle 17 Stimuli s2
+	setcycle 17 correct_response space
+	setcycle 18 Stimuli s2RR
+	setcycle 18 correct_response space
+	setcycle 19 Stimuli s1RR
+	setcycle 19 correct_response space
+	setcycle 20 Stimuli s1
+	setcycle 20 correct_response none
+	setcycle 21 Stimuli s1
+	setcycle 21 correct_response none
+	setcycle 22 Stimuli s1
+	setcycle 22 correct_response none
+	run TrialI2
+
+define sketchpad Instrukce1
+	set start_response_interval no
+	set duration keypress
+	set description "A sketchpad containing the instructions for the participant"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Press any key to begin!" x=0 y=0 z_index=0
+	draw image center=1 file="instrukce1.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Instrukce2
+	set start_response_interval no
+	set duration keypress
+	set description "A sketchpad containing the instructions for the participant"
+	draw image center=1 file="instrukce2.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Instrukce3
+	set start_response_interval no
+	set duration keypress
+	set description "A sketchpad containing the instructions for the participant"
+	draw image center=1 file="instrukce3.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Instrukce4
+	set start_response_interval no
+	set duration keypress
+	set description "A sketchpad containing the instructions for the participant"
+	draw image center=1 file="instrukce4.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Instrukce5
+	set start_response_interval no
+	set duration keypress
+	set description "A sketchpad notifying the participant that the practice phase is finished"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Press any key to continue" x=0 y=0 z_index=0
+	draw image center=1 file="instrukce5.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Maska
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw image center=1 file="maska.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define sketchpad Maska2
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw image center=1 file="maska2.png" scale=1 show_if=always x=0 y=0 z_index=0
+	draw image center=1 file="maska2.png" scale=1 show_if=always x=0 y=0 z_index=0
+	draw image center=1 file="maska.png" scale=1 show_if=always x=0 y=0 z_index=0
+
+define loop RIVT04
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order sequential
+	set offset no
+	set item block_sequence
+	set description "A loop containing one or more experimental blocks"
+	set cycles 20
+	set continuous no
+	set column_order practice
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Prubeh Inhib1000
+	setcycle 0 Instrukce 1
+	setcycle 1 Prubeh Inhib1640
+	setcycle 1 Instrukce 0
+	setcycle 2 Prubeh Inhib1000
+	setcycle 2 Instrukce 0
+	setcycle 3 Prubeh Inhib1640
+	setcycle 3 Instrukce 0
+	setcycle 4 Prubeh Inhib1000
+	setcycle 4 Instrukce 0
+	setcycle 5 Prubeh Inhib1640
+	setcycle 5 Instrukce 0
+	setcycle 6 Prubeh Inhib1000
+	setcycle 6 Instrukce 0
+	setcycle 7 Prubeh Inhib1640
+	setcycle 7 Instrukce 0
+	setcycle 8 Prubeh Inhib1000
+	setcycle 8 Instrukce 0
+	setcycle 9 Prubeh Inhib1640
+	setcycle 9 Instrukce 0
+	setcycle 10 Prubeh Vig1000
+	setcycle 10 Instrukce 0
+	setcycle 11 Prubeh Vig1640
+	setcycle 11 Instrukce 0
+	setcycle 12 Prubeh Vig1000
+	setcycle 12 Instrukce 0
+	setcycle 13 Prubeh Vig1640
+	setcycle 13 Instrukce 0
+	setcycle 14 Prubeh Vig1000
+	setcycle 14 Instrukce 0
+	setcycle 15 Prubeh Vig1640
+	setcycle 15 Instrukce 0
+	setcycle 16 Prubeh Vig1000
+	setcycle 16 Instrukce 0
+	setcycle 17 Prubeh Vig1640
+	setcycle 17 Instrukce 0
+	setcycle 18 Prubeh Vig1000
+	setcycle 18 Instrukce 0
+	setcycle 19 Prubeh Vig1640
+	setcycle 19 Instrukce 0
+	run block_sequence_1
+
+define keyboard_response RT1
+	set timeout 80
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+
+define keyboard_response RT2
+	set timeout 820
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+
+define keyboard_response RT3
+	set timeout 1720
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+
+define sketchpad S1
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s1.png" scale=1 show_if="[Stimuli] = s1" x=0 y=0 z_index=0
+
+define sketchpad S1LR
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s1_LR.png" scale=1 show_if="[Stimuli] = s1LR" x=0 y=0 z_index=0
+
+define sketchpad S1RR
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s1_RR.png" scale=1 show_if="[Stimuli] = s1RR" x=0 y=0 z_index=0
+
+define sketchpad S2
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s2.png" scale=1 show_if="[Stimuli] = s2" x=0 y=0 z_index=0
+
+define sketchpad S2LR
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s2_LR.png" scale=1 show_if="[Stimuli] = s2LR" x=0 y=0 z_index=0
+
+define sketchpad S2RR
+	set start_response_interval no
+	set duration 80
+	set description "Displays stimuli"
+	draw image center=1 file="s2_RR.png" scale=1 show_if="[Stimuli] = s2RR" x=0 y=0 z_index=0
+
+define sketchpad T1
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text=1 x=0 y=0 z_index=0
+
+define sketchpad T1_1
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text=1 x=0 y=0 z_index=0
+
+define sketchpad T2
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text="2<br />" x=0 y=32 z_index=0
+
+define sketchpad T2_1
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text="2<br />" x=0 y=32 z_index=0
+
+define sketchpad T3
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text=3 x=0 y=0 z_index=0
+
+define sketchpad T3_1
+	set duration 1000
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=sans font_italic=no font_size=50 html=yes show_if=always text=3 x=0 y=0 z_index=0
+
+define sequence TrialI1
+	set flush_keyboard yes
+	set description "A single trial"
+	run S1LR "[Stimuli] = s1LR"
+	run S1 "[Stimuli] = s1"
+	run S1RR "[Stimuli] = s1RR"
+	run S2 "[Stimuli] = s2"
+	run S2LR "[Stimuli] = s2LR"
+	run S2RR "[Stimuli] = s2RR"
+	run RT1 always
+	run Maska always
+	run RT2 always
+	run Maska2 always
+	run ISI always
+	run logger always
+
+define sequence TrialI2
+	set flush_keyboard yes
+	set description "A single trial"
+	run S1LR "[Stimuli] = s1LR"
+	run S1 "[Stimuli] = s1"
+	run S1RR "[Stimuli] = s1RR"
+	run S2 "[Stimuli] = s2"
+	run S2LR "[Stimuli] = s2LR"
+	run S2RR "[Stimuli] = s2RR"
+	run RT1 always
+	run Maska always
+	run RT3 always
+	run Maska2 always
+	run ISI2 always
+	run logger always
+
+define sequence TrialV1
+	set flush_keyboard yes
+	set description "A single trial"
+	run S1LR "[Stimuli] = s1LR"
+	run S1 "[Stimuli] = s1"
+	run S1RR "[Stimuli] = s1RR"
+	run S2 "[Stimuli] = s2"
+	run S2LR "[Stimuli] = s2LR"
+	run S2RR "[Stimuli] = s2RR"
+	run RT1 always
+	run Maska always
+	run RT2 always
+	run Maska2 always
+	run ISI always
+	run logger always
+
+define sequence TrialV2
+	set flush_keyboard yes
+	set description "A single trial"
+	run S1LR "[Stimuli] = s1LR"
+	run S1 "[Stimuli] = s1"
+	run S1RR "[Stimuli] = s1RR"
+	run S2 "[Stimuli] = s2"
+	run S2LR "[Stimuli] = s2LR"
+	run S2RR "[Stimuli] = s2RR"
+	run RT1 always
+	run Maska always
+	run RT3 always
+	run Maska2 always
+	run ISI2 always
+	run logger always
+
+define loop Vig1000
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description "A single block of trials"
+	set cycles 20
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Stimuli s1
+	setcycle 0 correct_response none
+	setcycle 1 Stimuli s1
+	setcycle 1 correct_response none
+	setcycle 2 Stimuli s1
+	setcycle 2 correct_response none
+	setcycle 3 Stimuli s1
+	setcycle 3 correct_response none
+	setcycle 4 Stimuli s1
+	setcycle 4 correct_response none
+	setcycle 5 Stimuli s1
+	setcycle 5 correct_response none
+	setcycle 6 Stimuli s1
+	setcycle 6 correct_response none
+	setcycle 7 Stimuli s1
+	setcycle 7 correct_response none
+	setcycle 8 Stimuli s1
+	setcycle 8 correct_response none
+	setcycle 9 Stimuli s1
+	setcycle 9 correct_response none
+	setcycle 10 Stimuli s1
+	setcycle 10 correct_response none
+	setcycle 11 Stimuli s1
+	setcycle 11 correct_response none
+	setcycle 12 Stimuli s1
+	setcycle 12 correct_response none
+	setcycle 13 Stimuli s1
+	setcycle 13 correct_response none
+	setcycle 14 Stimuli s1
+	setcycle 14 correct_response none
+	setcycle 15 Stimuli s1
+	setcycle 15 correct_response none
+	setcycle 16 Stimuli s2_RR
+	setcycle 16 correct_response space
+	setcycle 17 Stimuli s1_RR
+	setcycle 17 correct_response space
+	setcycle 18 Stimuli s2
+	setcycle 18 correct_response space
+	setcycle 19 Stimuli s1_LR
+	setcycle 19 correct_response space
+	run TrialV1
+
+define loop Vig1640
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description "A single block of trials"
+	set cycles 20
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Stimuli s1
+	setcycle 0 correct_response none
+	setcycle 1 Stimuli s1
+	setcycle 1 correct_response none
+	setcycle 2 Stimuli s1
+	setcycle 2 correct_response none
+	setcycle 3 Stimuli s1
+	setcycle 3 correct_response none
+	setcycle 4 Stimuli s1
+	setcycle 4 correct_response none
+	setcycle 5 Stimuli s1
+	setcycle 5 correct_response none
+	setcycle 6 Stimuli s1
+	setcycle 6 correct_response none
+	setcycle 7 Stimuli s1
+	setcycle 7 correct_response none
+	setcycle 8 Stimuli s1
+	setcycle 8 correct_response none
+	setcycle 9 Stimuli s1
+	setcycle 9 correct_response none
+	setcycle 10 Stimuli s1
+	setcycle 10 correct_response none
+	setcycle 11 Stimuli s1
+	setcycle 11 correct_response none
+	setcycle 12 Stimuli s1
+	setcycle 12 correct_response none
+	setcycle 13 Stimuli s1
+	setcycle 13 correct_response none
+	setcycle 14 Stimuli s1
+	setcycle 14 correct_response none
+	setcycle 15 Stimuli s1
+	setcycle 15 correct_response none
+	setcycle 16 Stimuli s2_RR
+	setcycle 16 correct_response space
+	setcycle 17 Stimuli s1_RR
+	setcycle 17 correct_response space
+	setcycle 18 Stimuli s2
+	setcycle 18 correct_response space
+	setcycle 19 Stimuli s1_LR
+	setcycle 19 correct_response space
+	run TrialV2
+
+define loop Zacvik
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description "A single block of trials"
+	set cycles 23
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Stimuli s1LR
+	setcycle 0 correct_response space
+	setcycle 1 Stimuli s2LR
+	setcycle 1 correct_response space
+	setcycle 2 Stimuli s2
+	setcycle 2 correct_response space
+	setcycle 3 Stimuli s2RR
+	setcycle 3 correct_response space
+	setcycle 4 Stimuli s1RR
+	setcycle 4 correct_response space
+	setcycle 5 Stimuli s1LR
+	setcycle 5 correct_response space
+	setcycle 6 Stimuli s2LR
+	setcycle 6 correct_response space
+	setcycle 7 Stimuli s2
+	setcycle 7 correct_response space
+	setcycle 8 Stimuli s2RR
+	setcycle 8 correct_response space
+	setcycle 9 Stimuli s1RR
+	setcycle 9 correct_response space
+	setcycle 10 Stimuli s1LR
+	setcycle 10 correct_response space
+	setcycle 11 Stimuli s2LR
+	setcycle 11 correct_response space
+	setcycle 12 Stimuli s2
+	setcycle 12 correct_response space
+	setcycle 13 Stimuli s2RR
+	setcycle 13 correct_response space
+	setcycle 14 Stimuli s1RR
+	setcycle 14 correct_response space
+	setcycle 15 Stimuli s1LR
+	setcycle 15 correct_response space
+	setcycle 16 Stimuli s2LR
+	setcycle 16 correct_response space
+	setcycle 17 Stimuli s2
+	setcycle 17 correct_response space
+	setcycle 18 Stimuli s2RR
+	setcycle 18 correct_response space
+	setcycle 19 Stimuli s1RR
+	setcycle 19 correct_response space
+	setcycle 20 Stimuli s1
+	setcycle 20 correct_response none
+	setcycle 21 Stimuli s1
+	setcycle 21 correct_response none
+	setcycle 22 Stimuli s1
+	setcycle 22 correct_response none
+	run trial_sequence_3
+
+define sequence block_sequence
+	set flush_keyboard yes
+	set description "A sequence containing a single block of trials followed by feedback to the participant"
+	run reset_feedback always
+	run T3 always
+	run T2 always
+	run T1 always
+	run Zacvik always
+
+define sequence block_sequence_1
+	set flush_keyboard yes
+	set description "A sequence containing a single block of trials followed by feedback to the participant"
+	run reset_feedback_1 always
+	run Instrukce5 "[Instrukce] = 1"
+	run T3_1 "[Instrukce] = 1"
+	run T2_1 "[Instrukce] = 1"
+	run T1_1 "[Instrukce] = 1"
+	run Inhib1000 "[Prubeh] = Inhib1000"
+	run Inhib1640 "[Prubeh] =Inhib1640"
+	run Vig1000 "[Prubeh] =Vig1000"
+	run Vig1640 "[Prubeh] =Vig1640"
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "The main sequence of the experiment"
+	run Instrukce1 always
+	run Instrukce2 always
+	run Instrukce3 always
+	run Instrukce4 always
+	run practice_loop always
+	run RIVT04 always
+
+define logger logger
+	set description "Logs experimental data"
+	set auto_log yes
+
+define loop practice_loop
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item block_sequence
+	set description "A loop containing one or more practice blocks"
+	set cycles 1
+	set continuous no
+	set column_order practice
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 practice yes
+	run block_sequence
+
+define reset_feedback reset_feedback
+	set description "Resets the feedback variables, such as 'avg_rt' and 'acc'"
+
+define reset_feedback reset_feedback_1
+	set description "Resets the feedback variables, such as 'avg_rt' and 'acc'"
+
+define sequence trial_sequence_3
+	set flush_keyboard yes
+	set description "A single trial"
+	run S1LR "[Stimuli] = s1LR"
+	run S1 "[Stimuli] = s1"
+	run S1RR "[Stimuli] = s1RR"
+	run S2 "[Stimuli] = s2"
+	run S2LR "[Stimuli] =s2LR"
+	run S2RR "[Stimuli] =s2RR"
+	run RT1 always
+	run Maska always
+	run RT2 always
+	run Maska2 always
+	run ISI always
+	run FBomiss_3 "[Stimuli] != s1 and [response_RT2] = None and [response_RT1] = None"
+	run FBcom_3 "[Stimuli] = s1 and [response_RT2] != None or [response_RT1] != None"
+	run logger always
+
