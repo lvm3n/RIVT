@@ -1,0 +1,407 @@
+fonts
+  arial 20
+
+#Set resolution to 1200x720p
+options
+  fullscreen
+  resolution 1200 720
+
+#Set of stimuli
+bitmaps
+  instrukce1
+  instrukce2
+  instrukce3
+  instrukce4
+  instrukce5
+  instrukce6
+  E1
+  E2
+  s1_LR
+  s2_LR
+  s2
+  s2_RR
+  s1_RR
+  s1
+  maska
+
+#table with inhibition block trials with shorter ITI: go/no-go; s1 - stimuli name; 1/0 should spacebar be pressed?; 1 - inhibition trial; 800 - ITI
+
+table inhib300_1
+  "go"	s1_LR	1	1	800
+  "go"	s2_LR	1	1	800
+  "go"	s2	1	1	800
+  "go"	s2_RR	1	1	800
+  "go"	s1_RR	1	1	800
+  "go"	s1_LR	1	1	800
+  "go"	s2_LR	1	1	800
+  "go"	s2	1	1	800
+  "go"	s2_RR	1	1	800
+  "go"	s1_RR	1	1	800
+  "go"	s1_LR	1	1	800
+  "go"	s2_LR	1	1	800
+  "go"	s2	1	1	800
+  "go"	s2_RR	1	1	800
+  "go"	s1_RR	1	1	800
+  "go"	s1_LR	1	1	800
+  "go"	s2_LR	1	1	800
+  "go"	s2	1	1	800
+  "go"	s2_RR	1	1	800
+  "go"	s1_RR	1	1	800
+  "nogo"	s1	0	1	800
+  "nogo"	s1	0	1	800
+  "nogo"	s1	0	1	800
+
+#table with inhibition block trials with longer ITI: go/no-go; s1 - stimuli name; 1/0 should spacebar be pressed?; 1 - inhibition trial; 1600 - ITI
+
+table inhib2000_1
+  "go"	s1_LR	1	1	1600
+  "go"	s2_LR	1	1	1600
+  "go"	s2	1	1	1600
+  "go"	s2_RR	1	1	1600
+  "go"	s1_RR	1	1	1600
+  "go"	s1_LR	1	1	1600
+  "go"	s2_LR	1	1	1600
+  "go"	s2	1	1	1600
+  "go"	s2_RR	1	1	1600
+  "go"	s1_RR	1	1	1600
+  "go"	s1_LR	1	1	1600
+  "go"	s2_LR	1	1	1600
+  "go"	s2	1	1	1600
+  "go"	s2_RR	1	1	1600
+  "go"	s1_RR	1	1	1600
+  "go"	s1_LR	1	1	1600
+  "go"	s2_LR	1	1	1600
+  "go"	s2	1	1	1600
+  "go"	s2_RR	1	1	1600
+  "go"	s1_RR	1	1	1600
+  "nogo"	s1	0	1	1600
+  "nogo"	s1	0	1	1600
+  "nogo"	s1	0	1	1600
+
+#table with vigilance block trials with shorter ITI: go/no-go; s1 - stimuli name; 1/0 should spacebar be pressed?; 2 - vigilance trial; 200 - ITI
+
+table vig300_1
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "nogo"	s1	0	2	200
+  "go"	s2_RR	1	2	800
+  "go"	s1_RR	1	2	800
+  "go"	s2	1	2	800
+  "go"	s1_LR	1	2	800
+
+#table with vigilance block trials with longer ITI: go/no-go; s1 - stimuli name; 1/0 should spacebar be pressed?; 2 - vigilance trial; 1200 - ITI
+
+table vig1300_1
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "nogo"	s1	0	2	1200
+  "go"	s2_RR	1	2	1600
+  "go"	s1_RR	1	2	1600
+  "go"	s2	1	2	1600
+  "go"	s1_LR	1	2	1600
+
+#table with practice trials: go/no-go; stimuli name; 1/0 should spacebar be pressed; 0 - practice trial; 800 - ITI
+table zacvik1
+"go"	s1_LR	1	0	800
+"go"	s2_LR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"go"	s1_RR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"nogo"	s1	0	0	800
+"go"	s1_LR	1	0	800
+"nogo"	s1	0	0	800
+"go"	s1_LR	1	0	800
+"go"	s2_LR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"go"	s1_RR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"nogo"	s1	0	0	800
+"go"	s1_LR	1	0	800
+"nogo"	s1	0	0	800
+"go"	s1_LR	1	0	800
+"go"	s2_LR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"go"	s1_RR	1	0	800
+"go"	s2	1	0	800
+"go"	s2_RR	1	0	800
+"nogo"	s1	0	0	800
+"go"	s1_LR	1	0	800
+"nogo"	s1	0	0	800
+
+#Practice trial
+task zacvik1
+  table zacvik1
+  keys space
+  set $errorstatus 1
+  show bitmap @2
+  delay 80
+  show bitmap maska
+  readkey 1 820 # wait 2 seconds for key to be pressed
+  if @3 == 0 and STATUS != TIMEOUT
+    set $errorstatus 2
+    show bitmap E1
+    delay 2000
+    clear -1
+  fi
+  if @3 == 1 and STATUS == TIMEOUT
+    set $errorstatus 3
+    show bitmap E2
+    delay 2000
+    clear -1
+  fi
+  delay @5 # intertrial interval
+  save @1 @2 @3 @4 @5 RT STATUS $errorstatus
+
+#Vigilance block with 200ms ITI
+task vig1000
+  table vig300_1
+  keys space
+  set $errorstatus 1
+  show bitmap @2
+  delay 80
+  show bitmap maska
+  readkey 1 820 # wait 2 seconds for key to be pressed
+  if @3 == 0 and STATUS != TIMEOUT
+    set $errorstatus 2
+  fi
+  if @3 == 1 and STATUS == TIMEOUT
+    set $errorstatus 3
+  fi
+  delay @5
+  save @1 @2 @3 @4 @5 RT STATUS $errorstatus
+
+#Vigilance block with 1200 ms ITI
+
+task vig2000
+  table vig1300_1
+  keys space
+  set $errorstatus 1
+  show bitmap @2
+  delay 80
+  show bitmap maska
+  readkey 1 820 # wait 2 seconds for key to be pressed
+  if @3 == 0 and STATUS != TIMEOUT
+    set $errorstatus 2
+  fi
+  if @3 == 1 and STATUS == TIMEOUT
+    set $errorstatus 3
+  fi
+  delay @5 
+  save @1 @2 @3 @4 @5 RT STATUS $errorstatus
+
+#Inhibition trial with shorter ITI
+
+task inhib1000
+  table inhib300_1
+  keys space
+  set $errorstatus 1
+  timestamp MyFirstTimestamp
+  show bitmap @2
+  delay 80
+  show bitmap maska
+  readkey 1 820 # wait 2 seconds for key to be pressed
+  timestamp MySecondTimestamp
+  set $x timestamp-diff MyFirstTimestamp MySecondTimestamp
+  if @3 == 0 and STATUS != TIMEOUT
+    set $errorstatus 2
+  fi
+  if @3 == 1 and STATUS == TIMEOUT
+    set $errorstatus 3
+  fi
+  delay @5 
+  save @1 @2 @3 @4 @5 RT STATUS $errorstatus $x
+
+#Inhibition trial with longer ITI
+task inhib2000
+  table inhib2000_1
+  keys space
+  set $errorstatus 1
+  show bitmap @2
+  delay 80
+  show bitmap maska
+  readkey 1 820 # wait 2 seconds for key to be pressed
+  if @3 == 0 and STATUS != TIMEOUT
+    set $errorstatus 2
+  fi
+  if @3 == 1 and STATUS == TIMEOUT
+    set $errorstatus 3
+  fi
+  delay @5 
+  save @1 @2 @3 @4 @5 RT STATUS $errorstatus
+
+
+# -------------------------------------
+#Testing starts here - with instructions and practice trial
+block zacinhib
+  message instrukce1
+  message instrukce2
+  message instrukce3
+  message instrukce4
+  message instrukce5
+  delay 2000
+  tasklist
+    zacvik1 30 all_before_repeat
+  end
+  feedback
+    text 0 0 "Average response time in training:"
+    set &MyRT mean c6 ; postfix "ms" ; select c7 == 1
+    text 0 50 &MyRT ; postfix "ms"
+    set &MyVar perc ; select c8 == 3 && c3 == 1
+    text  0 100 &MyVar ; prefix "Omission errors (missing a target):" ; postfix "%"
+    set &MyVar2 perc ; select c8 == 2 && c3 == 0
+    text  0 150 &MyVar2 ; prefix "Commission errors (reaction on distractor):" ; postfix "%"
+    text  0 250 Press SPACEBAR to continue
+  end
+
+#Blocks of inhibition part
+block inhib1000_1
+  message instrukce6
+  delay 2000
+  tasklist
+    inhib1000 23 all_before_repeat
+  end
+
+block inhib2000_1
+  tasklist
+    inhib2000 23 all_before_repeat
+  end
+
+block inhib1000_2
+  tasklist
+    inhib1000 23 all_before_repeat
+  end
+
+block inhib2000_2
+  tasklist
+    inhib2000 23 all_before_repeat
+  end
+
+block inhib1000_3
+  tasklist
+    inhib1000 23 all_before_repeat
+  end
+
+block inhib2000_4
+  tasklist
+    inhib2000 23 all_before_repeat
+  end
+
+block inhib1000_4
+  tasklist
+    inhib1000 23 all_before_repeat
+  end
+
+block inhib2000_5
+  tasklist
+    inhib2000 23 all_before_repeat
+  end
+
+block inhib1000_5
+  tasklist
+    inhib1000 23 all_before_repeat
+  end
+
+block inhib2000_6
+  tasklist
+    inhib2000 23 all_before_repeat
+  end
+
+block vig1000_1
+  tasklist
+    vig1000 20 all_before_repeat
+  end
+
+#blocks of vigilance part
+block vig2000_1
+  tasklist
+    vig2000 20 all_before_repeat
+  end
+
+block vig1000_2
+  tasklist
+    vig1000 20 all_before_repeat
+  end
+
+block vig2000_2
+  tasklist
+    vig2000 20 all_before_repeat
+  end
+
+block vig1000_3
+  tasklist
+    vig1000 20 all_before_repeat
+  end
+
+block vig2000_4
+  tasklist
+    vig2000 20 all_before_repeat
+  end
+
+block vig1000_4
+  tasklist
+    vig1000 20 all_before_repeat
+  end
+
+block vig2000_5
+  tasklist
+    vig2000 20 all_before_repeat
+  end
+
+block vig1000_5
+  tasklist
+    vig1000 20 all_before_repeat
+  end
+
+#last block and feedback to the participants
+
+block vig2000_6
+  tasklist
+    vig2000 20 all_before_repeat
+  end
+  feedback
+    set &RTinhib mean c6 ; select c7 == 1 && c4 == 1
+    set &RTvig mean c6  ; select c7 == 1 && c4 == 2
+    text 0 -200 &RTinhib ; prefix "Average response time in high target frequency (HTF) condition:" ; postfix "ms"
+    text 0 -150 &RTvig ; prefix "Average response time in low target frequency (LTF) condition:" ; postfix "ms"
+    set &opinhib perc 200; select c8 == 3 && c3 == 1 && c4 == 1
+    text  0 0 &opinhib ; prefix "Omission errors in HTF condition:" ; postfix "%"
+    set &opvig perc 40; select c8 == 3 && c3 == 1 && c4 == 2
+    text  0 50 &opvig ; prefix "Omission errors in LTF condition:" ; postfix "%"
+    set &cpinhib perc 30; select c8 == 2 && c3 == 0 && c4 == 1
+    text  0 100 &cpinhib ; prefix "Commission errors in HTF condition:" ; postfix "%"
+    set &cpvig perc 160; select c8 == 2 && c3 == 0 && c4 == 2
+    text  0 150 &cpvig ; prefix "Commission errors in LTF condition:" ; postfix "%"
+    text  0 250 Press SPACEBAR to exit.
+    text 0 300 Please, don't press escape or your data won't save.
+  end
